@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+<ul>
+    {% for person in persons%}
+    {% if (userid) == person.id|string %}
+    <div id="empty-div"></div>
+    <div id = "indi-profile">
+    
+        <div id = "profile-pic">
+            <li><img src= " {{url_for('static', filename = "uploads/"+ person.photo)}} " alt=  "Profile Photo" height = "90">
+        </div>
+    
+        <div id= "indi-profile-info">
+            <strong>{{ person.first_name }} {{ person.last_name}}</strong><br> 
+            <h6 id= "characteristics">
+            <img src = "https://cdn4.iconfinder.com/data/icons/dot/256/email_mail_post_letter_stamp.png" alt =
+            "Email Logo" height = "20" width = "20">{{person.email}} <br>
+            <img src = "https://image.flaticon.com/icons/svg/67/67347.svg" alt = "Location Icon" height = "20" 
+            width = "20">{{ person.location }} <br>
+            <img src = "https://image.flaticon.com/icons/png/512/42/42455.png" alt = "Calendar Logo"
+            height = "15" width = "18"> Joined on {{person.date}} </h6> <br>
+        </div>
+        <div class = bio>
+        <h5 id = "characteristics">About Me</h5>
+        {{person.biography}} 
+        </div>
+        <button type ="button" class= "btn3">Send Message</button>
+        <button type = "button" class = "btn4">Follow</button>
+    </li>
+    </div>
+    {% endif %}
+    {% endfor %}
+    </ul>
+{% endblock %}

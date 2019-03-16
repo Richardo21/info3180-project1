@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+<h1>Add A Profile</h1><br><br>
+<div class = 'form-container'>
+    <form method = "POST" enctype= "multipart/form-data" action ="{{ url_for('profile')}}">
+
+        {{ form.csrf_token }}
+
+        {{ form.firstname.label}}<br>
+        {{ form.firstname(class = 'form-input', placeholder = 'Enter your first name.')}}<br><br>
+
+        {{ form.lastname.label}}<br>
+        {{ form.lastname(class = 'form-input', placeholder = 'Enter your last name.')}}<br><br>
+
+        {{ form.gender.label}}<br>
+        {{ form.gender(class = 'form-input-gender', placeholder = 'Select your gender') }}<br><br>
+
+        {{ form.email.label}}<br>
+        {{ form.email(class = 'form-input', placeholder = 'Enter your email address.')}}<br><br>
+
+        {{ form.location.label}}<br>
+        {{ form.location(class = 'form-input', placeholder = 'Enter your location.')}}<br><br>
+
+        {{ form.biography.label}}<br>
+        {{ form.biography(cols = "30", rows = "5", class= 'form-input-bio', placeholder = 'Enter your biography...')}}<br><br>
+
+        {{ form.photo.label}}<br>
+        {{ form.photo(size = '30', class_ = "form-file-upload" )}}<br><br>
+
+        <button type = "sumbit" name = "submit" class = "btn btn-primary">Add Profile</button><br>
+
+    </form>
+</div>
+
+{% endblock %}

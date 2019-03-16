@@ -1,0 +1,155 @@
+body {
+    padding-top: 5rem;
+    background-color: rgba(210, 229, 250, 0.822);
+}
+
+
+#profile{
+/* background-color: aqua; */
+    border: 1px solid white;
+    border-radius: 10px;
+    border-top: 3px solid rgb(63, 159, 248);
+    box-shadow: 5px 5px 5px rgb(99, 96, 96);
+    height: 110px;
+    padding: 10px;
+    padding-left: 30px;
+    width: 600px;
+    background-color: white;
+    
+}
+
+#indi-profile {
+
+    border: 1px solid white;
+    border-radius: 10px;
+    border-top: 3px solid rgb(63, 159, 248);
+    height: 290px;
+    padding: 10px;
+    padding-left: 30px;
+    width: 540px;
+    background-color: white;
+    box-shadow: 5px 5px 5px rgb(99, 96, 96);
+
+}
+
+.form-container {
+    background-color: white;
+    padding: 10px 0px 10px 40px;
+    width: 700px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px 5px rgb(99, 96, 96);
+    border-top: 5px solid rgb(63, 159, 248);
+}
+
+.heading {
+    color: black;
+    /* text-shadow: 2px 2px 4px #000000; */
+}
+
+#profile > #profile-info {
+
+    position: relative;
+    left: 200px;
+    bottom: 80px;
+}
+
+#indi-profile > #indi-profile-info {
+    position: relative;
+    left: 200px;
+    bottom: 80px;
+
+}
+
+#profile > #profile-pic {
+
+    max-width: 50px;
+}
+
+.btn1{
+
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(20, 202, 20);
+    position: relative;
+    left : 200px;
+    bottom: 80px;
+    color: white;
+    width: 150px;
+
+
+}
+
+.btn3 {
+    position: relative;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(20, 202, 20);
+    color: white;
+    width: 150px;
+    bottom: 25px;
+
+}
+
+.btn4 {
+    position: relative;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(20, 150, 202);
+    color: white;
+    width: 150px;
+    bottom: 25px;
+    left: 50px;
+
+}
+
+.form-file-upload {
+
+    border: none;
+    border-radius: 5px;
+
+}
+
+#characteristics{
+
+    font-weight: lighter;
+    color:gray;
+
+}
+
+.bio {
+    position: relative;
+    bottom: 100px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+#empty-div {
+    height: 20px;
+}
+.btn1:hover {
+
+    box-shadow: 5px 5px 5px rgb(173, 173, 173);
+}
+
+.form-input {
+    border: 2px solid grey;
+    border-radius: 5px;
+    width: 50%;
+    padding: 12px 20px;
+   
+
+}
+
+.form-input-bio {
+    border: 2px solid grey;
+    border-radius: 5px;
+}
+
+.form-input-gender {
+    -webkit-appearance: menulist-button;
+    height: 50px;
+    width: 50%;
+    border: 0.1px solid rgb(82, 80, 80);
+}

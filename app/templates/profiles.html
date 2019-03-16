@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+
+{% block main %}
+
+{% include 'flash_messages.html' %}
+<h1 class= "heading">Profiles</h2> <br> <br>
+
+
+{% if persons %}
+
+<ul>
+{% for person in persons %}
+<div id="empty-div"></div>
+<div id = "profile">
+
+    <div id = "profile-pic">
+        <li><img src= " {{url_for('static', filename = "uploads/"+ person.photo)}} " alt=  "Profile Photo" height = "90">
+    </div>
+
+    <div id= "profile-info">
+        <strong>{{ person.first_name }} {{ person.last_name}}</strong><br> 
+        <h6 id= "characteristics">
+        <img src="https://cdn1.iconfinder.com/data/icons/freeline/32/account_friend_human_man_member_person_profile_user_users-512.png"
+        alt= "Person Icon" height = "15" width = "20">    {{person.gender }} <br>
+        <img src = "https://image.flaticon.com/icons/svg/67/67347.svg" alt = "Location Icon" height = "18" 
+        width = "20">{{ person.location }}</h6> <br>
+      <a href = "/profile/{{person.id}}"><button type ="button" class= "btn1">View Profile</button></a>
+    </div>
+</li>
+</div>
+{% endfor %}
+</ul>
+{% endif %}
+
+
+{% endblock %}
